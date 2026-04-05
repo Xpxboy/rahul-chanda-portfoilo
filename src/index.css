@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: #000000;
+}
+
+body {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+@keyframes light-sweep {
+  0% { left: -100%; }
+  100% { left: 200%; }
+}
+
+/* Dialedweb style text hover animation */
+.dw-link {
+  position: relative;
+  overflow: hidden;
+  display: inline-flex;
+  flex-direction: column;
+  height: 1.2em;
+  line-height: 1.2em;
+}
+
+.dw-link span {
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.dw-link:hover span {
+  transform: translateY(-100%);
+}
+
+/* Group hover text animation */
+.dw-link-group {
+  position: relative;
+  overflow: hidden;
+  display: inline-flex;
+  flex-direction: column;
+  height: 1.2em;
+  line-height: 1.2em;
+}
+
+.dw-link-group span {
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.group:hover .dw-link-group span {
+  transform: translateY(-100%);
+}
+
+/* Text Gradient Fade */
+.text-fade-right {
+  background: linear-gradient(to right, #ffffff 0%, #ffffff 55%, rgba(255, 255, 255, 0.15) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Dialedweb button hover */
+.dw-btn {
+  position: relative;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.dw-btn-text-wrapper {
+  position: relative;
+  overflow: hidden;
+  display: inline-flex;
+  flex-direction: column;
+  height: 1.2em;
+  line-height: 1.2em;
+}
+
+.dw-btn-text-wrapper span {
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.dw-btn:hover .dw-btn-text-wrapper span {
+  transform: translateY(-100%);
+}
